@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-control-panel-mark1"
+version = "0.1.0a1"
+description = "ovos-control-panel extension: draw the Mark-1's mouth and eyes, animate them, and update the faceplate firmware"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Andreas Lorensen"}]
+requires-python = ">=3.10"
+keywords = ["ovos", "openvoiceos", "mycroft", "mark1", "control-panel"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    # the panel this extends: panel extensions came back in this version
+    "ovos-control-panel>=0.0.1a85",
+    "ovos-mark1-utils",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "httpx"]
+
+[project.urls]
+Homepage = "https://github.com/andlo/ovos-control-panel-mark1"
+Issues = "https://github.com/andlo/ovos-control-panel-mark1/issues"
+
+# The page, for ovos-control-panel (see its docs/pages.md, "Panel extensions").
+[project.entry-points."opm.control_panel.page"]
+mark1 = "ovos_control_panel_mark1:PAGE"
+
+[tool.setuptools]
+packages = ["ovos_control_panel_mark1"]
+
+[tool.setuptools.package-data]
+ovos_control_panel_mark1 = ["page.html", "icon.svg", "i18n/*.json"]
