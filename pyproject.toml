@@ -17,8 +17,8 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
-    # the panel this extends: panel extensions came back in this version
-    "ovos-control-panel>=0.0.1a85",
+    # the panel this extends: from this version it has no Mark-1 page of its own
+    "ovos-control-panel>=0.0.1a81",
     "ovos-mark1-utils",
 ]
 

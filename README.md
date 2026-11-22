@@ -14,7 +14,7 @@ panel and its page takes that one's place:
 pip install ovos-control-panel-mark1
 ```
 
-Then restart the panel. It needs ovos-control-panel 0.0.1a85 or newer.
+Then restart the panel. It needs ovos-control-panel 0.0.1a81 or newer.
 
 ## The page
 
@@ -180,7 +180,7 @@ pip install -e ".[test]"
 pytest -q tests
 ```
 
-The page was the panel's own until 0.0.1a84; see the panel's
+The page was the panel's own until 0.0.1a80; see the panel's
 [docs/pages.md](https://github.com/OpenVoiceOS/ovos-control-panel/blob/dev/docs/pages.md#panel-extensions)
 for how an extension is found.
 
