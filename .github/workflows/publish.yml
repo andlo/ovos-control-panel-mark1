@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
       - name: Tests
         run: |
-          pip install -q -e ".[test]"
+          pip install -q --pre -e ".[test]"
           pytest -q tests
       - name: Build
         run: |
@@ -88,7 +88,7 @@ jobs:
               git log --no-merges --reverse --format='- %s' "$TAG"
             fi | grep -vE '^- v?[0-9]+\.[0-9]+\.[0-9]+((a|b|rc)[0-9]+)?$'
             echo; echo "## Install"; echo
-            echo '```'; echo "pip install $pkg==$ver"; echo '```'; echo
+            echo '```'; echo "pip install --pre $pkg==$ver"; echo '```'; echo
             echo -n "[PyPI](https://pypi.org/project/$pkg/$ver/)"
             [ -n "$prev" ] && echo -n " · [Full changelog](https://github.com/$GITHUB_REPOSITORY/compare/$prev...$TAG)"
             echo

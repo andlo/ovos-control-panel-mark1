@@ -11,10 +11,11 @@ page (eyes, colours, brightness, text on the mouth). Install this beside the
 panel and its page takes that one's place:
 
 ```
-pip install ovos-control-panel-mark1
+pip install --pre ovos-control-panel-mark1
 ```
 
-Then restart the panel. It needs ovos-control-panel 0.0.1a81 or newer.
+(`--pre`, as for the panel itself, which still needs alpha releases of
+OVOS.) Then restart the panel. It needs ovos-control-panel 0.0.1a81 or newer.
 
 ## The page
 
@@ -176,7 +177,7 @@ its log. For anything else, see [troubleshooting.md](https://github.com/OpenVoic
 ## Development
 
 ```
-pip install -e ".[test]"
+pip install --pre -e ".[test]"
 pytest -q tests
 ```
 
